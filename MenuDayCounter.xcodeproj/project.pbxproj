@@ -1,0 +1,304 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07635BCE1610898600283393 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07635BCD1610898600283393 /* Cocoa.framework */; };
+		07635BD81610898600283393 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07635BD61610898600283393 /* InfoPlist.strings */; };
+		07635BDA1610898600283393 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07635BD91610898600283393 /* main.m */; };
+		07635BDE1610898600283393 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 07635BDC1610898600283393 /* Credits.rtf */; };
+		07635BE11610898600283393 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07635BE01610898600283393 /* AppDelegate.m */; };
+		07635BE41610898600283393 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07635BE21610898600283393 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07635BC91610898600283393 /* MenuDayCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuDayCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07635BCD1610898600283393 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		07635BD01610898600283393 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		07635BD11610898600283393 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		07635BD21610898600283393 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		07635BD51610898600283393 /* MenuDayCounter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MenuDayCounter-Info.plist"; sourceTree = "<group>"; };
+		07635BD71610898600283393 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07635BD91610898600283393 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		07635BDB1610898600283393 /* MenuDayCounter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MenuDayCounter-Prefix.pch"; sourceTree = "<group>"; };
+		07635BDD1610898600283393 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		07635BDF1610898600283393 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		07635BE01610898600283393 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		07635BE31610898600283393 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07635BC61610898600283393 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07635BCE1610898600283393 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07635BBE1610898600283393 = {
+			isa = PBXGroup;
+			children = (
+				07635BD31610898600283393 /* MenuDayCounter */,
+				07635BCC1610898600283393 /* Frameworks */,
+				07635BCA1610898600283393 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07635BCA1610898600283393 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07635BC91610898600283393 /* MenuDayCounter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07635BCC1610898600283393 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07635BCD1610898600283393 /* Cocoa.framework */,
+				07635BCF1610898600283393 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07635BCF1610898600283393 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07635BD01610898600283393 /* AppKit.framework */,
+				07635BD11610898600283393 /* CoreData.framework */,
+				07635BD21610898600283393 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		07635BD31610898600283393 /* MenuDayCounter */ = {
+			isa = PBXGroup;
+			children = (
+				07635BDF1610898600283393 /* AppDelegate.h */,
+				07635BE01610898600283393 /* AppDelegate.m */,
+				07635BE21610898600283393 /* MainMenu.xib */,
+				07635BD41610898600283393 /* Supporting Files */,
+			);
+			path = MenuDayCounter;
+			sourceTree = "<group>";
+		};
+		07635BD41610898600283393 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				07635BD51610898600283393 /* MenuDayCounter-Info.plist */,
+				07635BD61610898600283393 /* InfoPlist.strings */,
+				07635BD91610898600283393 /* main.m */,
+				07635BDB1610898600283393 /* MenuDayCounter-Prefix.pch */,
+				07635BDC1610898600283393 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07635BC81610898600283393 /* MenuDayCounter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07635BE71610898600283393 /* Build configuration list for PBXNativeTarget "MenuDayCounter" */;
+			buildPhases = (
+				07635BC51610898600283393 /* Sources */,
+				07635BC61610898600283393 /* Frameworks */,
+				07635BC71610898600283393 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MenuDayCounter;
+			productName = MenuDayCounter;
+			productReference = 07635BC91610898600283393 /* MenuDayCounter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07635BC01610898600283393 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Adam Wright";
+			};
+			buildConfigurationList = 07635BC31610898600283393 /* Build configuration list for PBXProject "MenuDayCounter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 07635BBE1610898600283393;
+			productRefGroup = 07635BCA1610898600283393 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07635BC81610898600283393 /* MenuDayCounter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07635BC71610898600283393 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07635BD81610898600283393 /* InfoPlist.strings in Resources */,
+				07635BDE1610898600283393 /* Credits.rtf in Resources */,
+				07635BE41610898600283393 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07635BC51610898600283393 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07635BDA1610898600283393 /* main.m in Sources */,
+				07635BE11610898600283393 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		07635BD61610898600283393 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07635BD71610898600283393 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		07635BDC1610898600283393 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07635BDD1610898600283393 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		07635BE21610898600283393 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07635BE31610898600283393 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07635BE51610898600283393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		07635BE61610898600283393 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		07635BE81610898600283393 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MenuDayCounter/MenuDayCounter-Prefix.pch";
+				INFOPLIST_FILE = "MenuDayCounter/MenuDayCounter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		07635BE91610898600283393 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MenuDayCounter/MenuDayCounter-Prefix.pch";
+				INFOPLIST_FILE = "MenuDayCounter/MenuDayCounter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07635BC31610898600283393 /* Build configuration list for PBXProject "MenuDayCounter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07635BE51610898600283393 /* Debug */,
+				07635BE61610898600283393 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07635BE71610898600283393 /* Build configuration list for PBXNativeTarget "MenuDayCounter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07635BE81610898600283393 /* Debug */,
+				07635BE91610898600283393 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07635BC01610898600283393 /* Project object */;
+}
