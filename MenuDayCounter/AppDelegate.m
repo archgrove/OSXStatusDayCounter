@@ -25,10 +25,29 @@
     statusItem.menu = self.menuBarMenu;
     
     // Update with the initial value
-    [self changeStatusItem];
+    [self updateStatusItem];
+    
+    // Setup the update timer
+    [self resetUpdateTimer];
+    
+    // If the user changes the clock, update the status
+    [[NSNotificationCenter defaultCenter] addObserverForName:NSSystemClockDidChangeNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+        [self updateStatusItem];
+    }];
+    
+    // If we wake from sleep, update the status and reset the timer
+    [[NSNotificationCenter defaultCenter] addObserverForName:NSWorkspaceDidWakeNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+        [self updateStatusItem];
+        [self resetUpdateTimer];
+    }];
+    
+    // If we sleep, cancel the timer
+    [[NSNotificationCenter defaultCenter] addObserverForName:NSWorkspaceWillSleepNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+        updateTimer = nil;
+    }];
 }
 
-- (void)changeStatusItem
+- (void)updateStatusItem
 {
     NSDate *targetDate = [defaults objectForKey:@"targetDate"];
     
@@ -59,7 +78,23 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    [self changeStatusItem];
+    [self updateStatusItem];
+}
+
+- (void)updateTimerFired:(id)context
+{
+    [self updateStatusItem];
+    [self resetUpdateTimer];
+}
+
+- (void)resetUpdateTimer
+{
+    // Setup a time interval that spans until 12:00:01 tomorrow
+    NSDate *midnight = [NSDate dateWithNaturalLanguageString:@"Midnight tomorrow"];
+    NSTimeInterval toWait = [midnight timeIntervalSinceNow];
+    toWait += 1;
+    
+    updateTimer = [NSTimer timerWithTimeInterval:toWait target:self selector:@selector(updateTimerFired:) userInfo:nil repeats:NO];
 }
 
 @end

@@ -12,6 +12,7 @@
 {
     NSUserDefaults *defaults;
     NSStatusItem *statusItem;
+    NSTimer *updateTimer;
 }
 
 @property (assign) IBOutlet NSWindow *window;
