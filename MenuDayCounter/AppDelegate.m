@@ -68,7 +68,9 @@
 
 - (IBAction)changeDateSelected:(id)sender
 {
-    [self.window makeKeyAndOrderFront:nil];
+    // We must be the active application to show our window, which we're not in general
+    [NSApp activateIgnoringOtherApps:YES];
+    [self.window makeKeyAndOrderFront:self];
 }
 
 - (IBAction)doneSelected:(id)sender
