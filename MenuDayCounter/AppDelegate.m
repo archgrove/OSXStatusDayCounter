@@ -36,13 +36,14 @@
     }];
     
     // If we wake from sleep, update the status and reset the timer
-    [[NSNotificationCenter defaultCenter] addObserverForName:NSWorkspaceDidWakeNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserverForName:NSWorkspaceDidWakeNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+        NSLog(@"Got wakeup notification");
         [self updateStatusItem];
         [self resetUpdateTimer];
     }];
     
     // If we sleep, cancel the timer
-    [[NSNotificationCenter defaultCenter] addObserverForName:NSWorkspaceWillSleepNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+    [[[NSWorkspace sharedWorkspace] notificationCenter] addObserverForName:NSWorkspaceWillSleepNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
         updateTimer = nil;
     }];
 }
