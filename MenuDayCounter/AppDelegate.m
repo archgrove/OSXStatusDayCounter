@@ -37,7 +37,6 @@
     
     // If we wake from sleep, update the status and reset the timer
     [[[NSWorkspace sharedWorkspace] notificationCenter] addObserverForName:NSWorkspaceDidWakeNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
-        NSLog(@"Got wakeup notification");
         [self updateStatusItem];
         [self resetUpdateTimer];
     }];
@@ -62,8 +61,17 @@
         
         // This computes the total number of seconds from now unti then
         NSTimeInterval distance = [targetDate timeIntervalSinceNow];
-        int days = distance / secondsPerDay;
-        statusItem.title = [NSString stringWithFormat:@"%i days left", days];
+        int days = (distance / secondsPerDay) + 1;
+        
+        NSString *menuString = nil;
+        if (days > 0)
+            menuString = days > 1 ? @"%i days left" : @"%i day left";
+        else if (days == 0)
+            menuString = @"It's today";
+        else
+            menuString = days < -1 ? @"%i days ago" : @"%i day ago";
+        
+        statusItem.title = [NSString stringWithFormat:menuString, abs(days)];
     }
 }
 
